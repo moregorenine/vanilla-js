@@ -1,6 +1,6 @@
 {
-  "name": "webpack-boilerplate",
-  "version": "3.0.0",
+  "name": "vanilla-js",
+  "version": "1.0.0",
   "description": "Sensible webpack 5 boilerplate using Babel and PostCSS.",
   "main": "index.js",
   "author": "Tania Rascia",
@@ -47,6 +47,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:taniarascia/webpack-boilerplate"
+    "url": "git@github.com:moregorenine/vanilla-js"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }
