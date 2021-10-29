@@ -48,5 +48,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:moregorenine/vanilla-js"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }
