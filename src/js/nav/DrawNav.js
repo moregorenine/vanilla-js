@@ -1,11 +1,28 @@
-const drawNav = function(container) {
+const removeClassNameFromTargets = function(targets, className) {
+  targets.forEach(target => {
+    target.classList.remove('active')
+  })
+}
+
+const setClickEvent = function(ul) {
+  ul.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', event => {
+      const targets = document.querySelector('.nav.nav-tabs').querySelectorAll('a')
+      removeClassNameFromTargets(targets, 'active')
+      a.classList.add('active')
+    })
+  })
+}
+
+const drawNav = function(container, defaultActiveId) {
   const ul = document.createElement('ul')
   ul.className = 'nav nav-tabs'
 
   const li_about = document.createElement('li')
   li_about.className = 'nav-item'
   const a_about = document.createElement('a')
-  a_about.className = 'nav-link active'
+  a_about.id = 'a_about'
+  a_about.className = 'nav-link'
   a_about.href = '#'
   a_about.innerText = 'about'
   li_about.append(a_about)
@@ -13,23 +30,20 @@ const drawNav = function(container) {
   const li_datatables = document.createElement('li')
   li_datatables.className = 'nav-item'
   const a_datatables = document.createElement('a')
+  a_datatables.id = 'a_datatables'
   a_datatables.className = 'nav-link'
   a_datatables.href = '#'
-  a_datatables.innerText = 'datatables'
+  a_datatables.innerText = 'DataTables'
   li_datatables.append(a_datatables)
-
-  // const li_handsontable = document.createElement('li')
-  // li_handsontable.className = 'nav-item'
-  // const a_handsontable = document.createElement('a')
-  // a_handsontable.className = 'nav-link'
-  // a_handsontable.href = '#'
-  // a_handsontable.innerText = 'handsontable'
-  // li_handsontable.append(a_handsontable)
 
   ul.append(li_about, li_datatables)
 
   container.append(ul)
+
+  setClickEvent(ul)
+  document.querySelector('#'+defaultActiveId).classList.add('active')
 }
+
 
 export default drawNav
 
