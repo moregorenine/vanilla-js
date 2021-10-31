@@ -50,6 +50,9 @@
     "url": "git@github.com:moregorenine/vanilla-js"
   },
   "dependencies": {
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^5.1.3",
+    "datatables.net": "^1.11.3",
+    "datatables.net-dt": "^1.11.3",
+    "jquery": "^3.6.0"
   }
 }
