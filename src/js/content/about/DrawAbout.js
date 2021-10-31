@@ -4,6 +4,7 @@ const DrawAbout = function(container) {
   h1.innerText = 'Hello, vanilla js development!'
   const h5 = document.createElement('h5')
   h5.innerText = 'vanilla js & webpack 개발환경'
+  h5.className = 'mt-3'
 
   container.append(h1, h5)
 
