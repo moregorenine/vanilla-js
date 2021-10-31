@@ -1,3 +1,5 @@
+import DrawContent from '../content/DrawContent'
+
 const removeClassNameFromTargets = function(targets, className) {
   targets.forEach(target => {
     target.classList.remove('active')
@@ -7,8 +9,9 @@ const removeClassNameFromTargets = function(targets, className) {
 const setClickEvent = function(ul) {
   ul.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', event => {
-      const targets = document.querySelector('.nav.nav-tabs').querySelectorAll('a')
+      const targets = ul.querySelectorAll('a')
       removeClassNameFromTargets(targets, 'active')
+      DrawContent(document.querySelector('#s-content'), a.id)
       a.classList.add('active')
     })
   })
