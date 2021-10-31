@@ -44,7 +44,7 @@ const drawNav = function(container, defaultActiveId) {
   container.append(ul)
 
   setClickEvent(ul)
-  document.querySelector('#'+defaultActiveId).classList.add('active')
+  a_about.click()
 }
 
 
